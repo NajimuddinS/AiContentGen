@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const API_KEY = 'AIzaSyAP9xhvvJDWbq4FzAEKdcsithN17sd2b8w';
+const API_KEY = import.meta.env?.VITE_GOOGLE_API_KEY
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const getPlatformPrompt = (topic, platform) => {
